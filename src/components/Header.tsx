@@ -40,8 +40,8 @@ export const Header = () => {
             <a href="#" className="font-display text-xl font-bold text-foreground">
               <span className="text-gradient">Meta</span>Ads
             </a>
-            <span className="hidden md:block text-muted-foreground">|</span>
-            <span className="hidden md:block font-display text-lg font-semibold text-foreground">
+            <span className="text-muted-foreground">|</span>
+            <span className="font-display text-base md:text-lg font-semibold text-foreground">
               Haris Ali
             </span>
           </div>
