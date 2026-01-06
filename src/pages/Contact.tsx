@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
 const budgetOptions = [
+  "Not sure yet",
   "Less than $500/month",
   "$500 - $1,000/month",
   "$1,000 - $2,500/month",
@@ -145,7 +146,7 @@ const Contact = () => {
             {/* Phone with Country Code */}
             <div className="space-y-2">
               <Label htmlFor="phone" className="text-foreground">
-                Phone Number <span className="text-primary">*</span>
+                Phone Number <span className="text-muted-foreground">(optional)</span>
               </Label>
               <div className="flex gap-3">
                 <select
@@ -172,7 +173,6 @@ const Contact = () => {
                   placeholder="123 456 7890"
                   value={formData.phone}
                   onChange={handleChange}
-                  required
                   className="flex-1 bg-background/50 border-border focus:border-primary"
                 />
               </div>
