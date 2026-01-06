@@ -35,14 +35,13 @@ export const Header = () => {
     >
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between h-20">
-          {/* Left - Logo */}
-          <a href="#" className="font-display text-xl font-bold text-foreground">
-            <span className="text-gradient">Meta</span>Ads
-          </a>
-
-          {/* Center - Name */}
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
-            <span className="font-display text-lg font-semibold text-foreground">
+          {/* Left - Logo + Name */}
+          <div className="flex items-center gap-4">
+            <a href="#" className="font-display text-xl font-bold text-foreground">
+              <span className="text-gradient">Meta</span>Ads
+            </a>
+            <span className="hidden md:block text-muted-foreground">|</span>
+            <span className="hidden md:block font-display text-lg font-semibold text-foreground">
               Haris Ali
             </span>
           </div>
