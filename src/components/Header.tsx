@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -34,9 +35,17 @@ export const Header = () => {
     >
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between h-20">
+          {/* Left - Logo */}
           <a href="#" className="font-display text-xl font-bold text-foreground">
             <span className="text-gradient">Meta</span>Ads
           </a>
+
+          {/* Center - Name */}
+          <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
+            <span className="font-display text-lg font-semibold text-foreground">
+              Haris Ali
+            </span>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -50,7 +59,7 @@ export const Header = () => {
               </a>
             ))}
             <Button variant="hero" size="sm" asChild>
-              <a href="#contact">Get in Touch</a>
+              <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>
 
@@ -85,9 +94,9 @@ export const Header = () => {
                 </a>
               ))}
               <Button variant="hero" size="sm" asChild>
-                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                   Get in Touch
-                </a>
+                </Link>
               </Button>
             </div>
           </motion.div>

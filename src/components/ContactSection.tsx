@@ -1,27 +1,22 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, MessageCircle, Linkedin, ArrowRight } from "lucide-react";
+import { Mail, Linkedin, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const contactLinks = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@example.com",
-    href: "mailto:hello@example.com",
-  },
-  {
-    icon: MessageCircle,
-    label: "WhatsApp",
-    value: "+92 XXX XXXXXXX",
-    href: "https://wa.me/92XXXXXXXXXX",
+    value: "harisali124@gmail.com",
+    href: "mailto:harisali124@gmail.com",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
     value: "Connect on LinkedIn",
-    href: "https://linkedin.com/in/yourprofile",
+    href: "https://www.linkedin.com/in/haris-aliofficial/",
   },
 ];
 
@@ -62,7 +57,7 @@ export const ContactSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="grid md:grid-cols-3 gap-6 mb-12"
+            className="grid md:grid-cols-2 gap-6 max-w-xl mx-auto mb-12"
           >
             {contactLinks.map((link, index) => (
               <a
@@ -94,10 +89,10 @@ export const ContactSection = () => {
               Prefer a quick chat? Send me a message and let's discuss your project.
             </p>
             <Button variant="accent" size="xl" asChild>
-              <a href="mailto:hello@example.com">
+              <Link to="/contact">
                 Get in Touch
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </Link>
             </Button>
           </motion.div>
         </div>
