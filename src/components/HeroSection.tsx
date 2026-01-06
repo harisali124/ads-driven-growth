@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, Target, Zap } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
@@ -83,7 +84,7 @@ export const HeroSection = () => {
               </a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <a href="#contact">Contact Me</a>
+              <Link to="/contact">Contact Me</Link>
             </Button>
           </motion.div>
         </div>
